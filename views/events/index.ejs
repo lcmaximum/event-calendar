@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+
+<h1>All Appointments</h1>
+
+<%if (!events.length) { %>
+  <h4>No appointments yet. 
+    <%}%>
+  <a href="/events/new">Add an event</a>
+
+  <% events.forEach(function(i) { %>
+    <% let d = i.date.toDateString()%>
+    <div class="event-panel">
+        <tr>
+            <td><%= d %></td>
+            <td><%= i.title %></td>
+            <td><%=i.evHour%>:<%=i.evMinute%> <%=i.evAMPM %> </td>
+            
+        </tr>
+
+    </div>
+    
+    <% }) %>

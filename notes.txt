@@ -1,0 +1,30 @@
+[x] Set up for any user to add an event to the calendar
+    [x] Event model: Date, Time, Event Title
+    [x] Controller functions:
+        [x] index
+            [x] sort by date (asc)
+        [x] new (non-RESTful)
+        [x] create
+    [x] Connect to MongoDB Atlas
+
+[] Basic styling
+    [x] waterCSS theme
+    [] accordion panels for calendar events
+
+[] Add OAUTH
+    [] start with realproject2>views>index.ejs
+    [] search rp2 for 'isLoggedIn'
+    [] also consult 'oauth boilerplate'
+
+[] Fix Time Zone issue!
+
+[] Add Update and Delete functionality
+
+[] Modify index function with custom styling for events whose date has passed
+
+[] Add 'mark complete' function to Index
+
+
+--------
+
+THEN add more details, embedded schemas, etc. 
