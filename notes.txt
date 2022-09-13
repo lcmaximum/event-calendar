@@ -11,6 +11,8 @@
     [x] waterCSS theme
     [] accordion panels for calendar events
 
+[x] Add Update and Delete functionality
+
 [] Add OAUTH
     [] start with realproject2>views>index.ejs
     [] search rp2 for 'isLoggedIn'
@@ -18,7 +20,8 @@
 
 [] Fix Time Zone issue!
 
-[] Add Update and Delete functionality
+
+[] update Edit form to show event info
 
 [] Modify index function with custom styling for events whose date has passed
 

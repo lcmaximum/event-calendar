@@ -9,14 +9,21 @@
 
   <% events.forEach(function(i) { %>
     <% let d = i.date.toDateString()%>
-    <div class="event-panel">
+    <div id='index-event' class="accordion">
         <tr>
             <td><%= d %></td>
             <td><%= i.title %></td>
             <td><%=i.evHour%>:<%=i.evMinute%> <%=i.evAMPM %> </td>
+            <div id='crud-buttons'>
+            <td><form action='/events/<%=i._id%>/?_method=DELETE' method="POST">
+              <button type ="submit">Delete</button></form></td>
+              <td><a href="/events/<%=i._id%>/edit"><button>Edit</button></a></td></div>
             
         </tr>
 
     </div>
-    
+
+<div class="panel">
+  <p>Lorem ipsum...</p>
+</div>
     <% }) %>

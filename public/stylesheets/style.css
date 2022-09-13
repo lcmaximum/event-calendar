@@ -1,8 +1,51 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  max-width: 70ch;
+  padding: 3em 1em;
+  margin: auto;
+  line-height: 1.75;
+  font: 1.25em sans-serif;
 }
 
 a {
   color: #755ef5;
+}
+
+
+td {
+  margin: 5px 10px;
+}
+
+.accordion {
+  
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: solid #755ef5;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion:hover {
+  background-color: #444;
+}
+
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+#index-event {
+  border: solid #755ef5;
+
+}
+
+#crud-buttons {
+  display: flex;
+  flex-direction: row-reverse;
 }

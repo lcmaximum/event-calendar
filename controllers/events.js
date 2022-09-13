@@ -1,8 +1,9 @@
 const Event = require('../models/event');
 
 module.exports = {
-    index, new: newEvent, create
+    index, new: newEvent, create, delete: deleteEvent, edit, update
 }
+
 
 function index(req,res) {
     Event.find({}, function(err, events) {
@@ -32,3 +33,38 @@ function create(req, res) {
       
       res.redirect('/events');
     })}
+
+function deleteEvent(req, res) {
+        Event.findByIdAndDelete(req.params.id, function (err) {
+            if(err) console.log('Error');
+            console.log('Successfully deleted.');
+    
+            res.redirect('/events');
+        });
+    }
+    
+function edit(req,res) {
+      Event.findById(req.params.id, function(err, event) {
+       if (err) {
+        console.log(err)
+        res.redirect('/events/index')
+       } else {
+        
+        res.render('events/edit', { title: 'Edit Details', event });
+      }})
+    }
+    
+function update(req, res) {
+      Event.findByIdAndUpdate(req.params.id, req.body, function(err, event){
+        if (err) {
+          console.log(err)
+          res.redirect("/events/edit")
+        } else {
+
+          event.save(function(err) {
+            if (err) {console.log(err);return res.redirect('/events/new')}
+          
+      })
+    
+    };})}
+    
