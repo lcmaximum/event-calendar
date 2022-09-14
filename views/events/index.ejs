@@ -8,10 +8,10 @@
   <a href="/events/new">Add an event</a>
 
   <% events.forEach(function(i) { %>
-    <% let d = i.date.toDateString()%>
+
     <div id='index-event' class="accordion">
         <tr>
-            <td><%= d %></td>
+            <td><%= i.dateString %></td>
             <td><%= i.title %></td>
             <td><%=i.evHour%>:<%=i.evMinute%> <%=i.evAMPM %> </td>
             <div id='crud-buttons'>
