@@ -4,7 +4,6 @@ module.exports = {
     index, new: newEvent, create, delete: deleteEvent, edit, update
 }
 
-
 function index(req,res) {
     Event.find({}, function(err, events) {
         res.render('events/index', {title: 'All Events', events});

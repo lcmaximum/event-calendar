@@ -7,7 +7,10 @@ const eventSchema = new Schema({
     dateString: String,
     evHour: String,
     evMinute: String,
-    evAMPM: String
+    evAMPM: String,
+    happeningSoon: Boolean,
+    isPast: Boolean,
+
 });
 
 module.exports = mongoose.model('Event', eventSchema);

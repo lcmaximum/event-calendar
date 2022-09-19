@@ -9,9 +9,10 @@
 
 [] Basic styling
     [x] waterCSS theme
-    [] accordion panels for calendar events
+    [] accordion panels for calendar events <-- THIS is what clotheslined me?!
 
-[x] Add Update and Delete functionality
+[x] Add Delete functionality
+[] Add Update functionality <-- in progress
 
 [] Add OAUTH
     [] start with realproject2>views>index.ejs
@@ -31,3 +32,14 @@
 --------
 
 THEN add more details, embedded schemas, etc. 
+
+OK part of date object is maybe making sense to me!
+
+in model:
+date: Date,
+displayDate: String,
+displayTime: String
+
+in eventCtrl.index:
+event.displayDate = date.toDateString();
+event.displayTime = date.toTimeString();

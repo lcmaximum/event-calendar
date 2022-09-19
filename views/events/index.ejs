@@ -7,9 +7,10 @@
     <%}%>
   <a href="/events/new">Add an event</a>
 
-  <% events.forEach(function(i) { %>
 
-    <div id='index-event' class="accordion">
+  <% events.forEach(function(i) { %>
+<div class="event-display">
+    <div class="accordion">
         <tr>
             <td><%= i.dateString %></td>
             <td><%= i.title %></td>
@@ -19,11 +20,11 @@
               <button type ="submit">Delete</button></form></td>
               <td><a href="/events/<%=i._id%>/edit"><button>Edit</button></a></td></div>
             
-        </tr>
-
-    </div>
-
-<div class="panel">
-  <p>Lorem ipsum...</p>
+        </tr></div>
+  <div class="panel" style="display:none">
+    <p>Lorem ipsum...</p>
+  </div> 
 </div>
     <% }) %>
+
+    <%- include('../partials/footer' )%>
