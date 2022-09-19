@@ -16,6 +16,16 @@
        
        <script>
 
+
+function togglePanel(e) {
+    console.log(e);
+    if (e.nextElementSibling.style.display==='none') {
+        e.nextElementSibling.style.display="block";
+    } else {
+        e.nextElementSibling.style.display='none';
+    }
+
+}
         </script>
 
     </head>

@@ -9,8 +9,8 @@
 
 
   <% events.forEach(function(i) { %>
-<div class="event-display">
-    <div class="accordion">
+<div class="event-display" >
+    <div class="accordion" onclick="togglePanel(this)">
         <tr>
             <td><%= i.dateString %></td>
             <td><%= i.title %></td>
