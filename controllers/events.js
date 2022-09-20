@@ -23,6 +23,7 @@ function create(req, res) {
     
     const event = new Event(req.body);
     event.dateString = event.date.toDateString();
+    event.timeString = event.date.toLocaleTimeString();
     //event.userId = req.user._id isLoggedIn
     
 

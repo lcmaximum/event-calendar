@@ -10,9 +10,8 @@ a {
   color: #755ef5;
 }
 
-
-td {
-  margin: 5px 10px;
+tr {
+  display: flex;
 }
 
 .accordion {
@@ -35,7 +34,7 @@ td {
 /* Style the accordion panel. Note: hidden by default */
 .panel {
   padding: 0 18px;
-  background-color: white;
+  
   display: none;
   overflow: hidden;
 }

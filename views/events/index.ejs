@@ -12,9 +12,9 @@
 <div class="event-display" >
     <div class="accordion" onclick="togglePanel(this)">
         <tr>
-            <td><%= i.dateString %></td>
-            <td><%= i.title %></td>
-            <td><%=i.evHour%>:<%=i.evMinute%> <%=i.evAMPM %> </td>
+            <td style="font-size: 34px;"><%= i.dateString %></td>
+            <td class="event-display-title"><%= i.title %></td>
+            <td class="event-display-time"><%=i.timeString %> </td>
             <div id='crud-buttons'>
             <td><form action='/events/<%=i._id%>/?_method=DELETE' method="POST">
               <button type ="submit">Delete</button></form></td>
