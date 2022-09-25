@@ -26,6 +26,16 @@ function togglePanel(e) {
     }
 
 }
+
+function hasPassed(event) {
+    let today = new Date();
+    let eDate = event.date;
+    if (today>eDate) {
+        return true
+    }
+
+}
+
         </script>
 
     </head>

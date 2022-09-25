@@ -15,7 +15,7 @@ tr {
 }
 
 .accordion {
-  
+  color: gray;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -40,11 +40,20 @@ tr {
 }
 
 #index-event {
-  border: solid #755ef5;
-
+  outline-style: solid;
+  outline-color: #755ef5;
+/* outline is not part of the element's dimensions; border is. outline may overlap other content; border don't*/
 }
 
 #crud-buttons {
   display: flex;
   flex-direction: row-reverse;
+}
+
+.event-display {
+  color: orange;
+}
+
+.date-passed {
+  background-color: gray;
 }
